@@ -10,6 +10,6 @@ jobs:
     steps:
       - name: Ping Supabase Database
         run: |
-          curl -X POST "${{ secrets.SUPABASE_URL }}/rest/v1/profiles?select=count" \
-          -H "apikey: ${{ secrets.SUPABASE_KEY }}" \
-          -H "Authorization: Bearer ${{ secrets.SUPABASE_KEY }}"
+          curl -X POST "${{ secrets.https://tlknyamikqhtxafvejte.supabase.co }}/rest/v1/profiles?select=count" \
+          -H "apikey: ${{ secrets.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRsa255YW1pa3FodHhhZnZlanRlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzk4MTk2NzUsImV4cCI6MjA5NTM5NTY3NX0.YjP6vHj7Illt8OeqYaAkFyLZCAkXciNmVLZt2pOREN0 }}" \
+          -H "Authorization: Bearer ${{ secrets.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRsa255YW1pa3FodHhhZnZlanRlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzk4MTk2NzUsImV4cCI6MjA5NTM5NTY3NX0.YjP6vHj7Illt8OeqYaAkFyLZCAkXciNmVLZt2pOREN0 }}"
