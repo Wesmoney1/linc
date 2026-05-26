@@ -1,0 +1,15 @@
+name: Keep Supabase Alive
+on:
+  schedule:
+    - cron: '0 0 * * 2,5' # Runs automatically every Tuesday and Friday at midnight
+  workflow_dispatch: # Allows you to trigger it manually from GitHub if needed
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Supabase Database
+        run: |
+          curl -X POST "${{ secrets.SUPABASE_URL }}/rest/v1/profiles?select=count" \
+          -H "apikey: ${{ secrets.SUPABASE_KEY }}" \
+          -H "Authorization: Bearer ${{ secrets.SUPABASE_KEY }}"
